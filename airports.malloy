@@ -1,12 +1,15 @@
-// 1) You should see a popup asking you if you want to install the
-//  Malloy extension. 
+// Step 1:
+//  You should see a popup asking you if you want to install the
+//  Malloy extension.  
 //
 //  Click: 'Install' and then return to this Editor Tab
 //
 source: airports is table('duckdb:airports.csv') {
   measure: airport_count is count()
 
-  // 2) Click the 'Run' button below after installing the extension
+  // Step 2:
+  // Click the 'Run' button below after installing the extension
+
   query: airports_by_region_dashboard is {
     group_by: faa_region
     aggregate: airport_count
